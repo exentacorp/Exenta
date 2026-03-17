@@ -1,0 +1,433 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0rem;
+  
+  /* KEPT-style color scheme - Purple/Violet */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.15 0.02 290);
+  --card: oklch(0.99 0 0);
+  --card-foreground: oklch(0.15 0.02 290);
+  --popover: oklch(0.99 0 0);
+  --popover-foreground: oklch(0.15 0.02 290);
+  
+  /* Primary - Deep Purple (КЕПТ style) */
+  --primary: oklch(0.35 0.15 290);
+  --primary-foreground: oklch(0.99 0 0);
+  
+  /* Secondary - Light lavender */
+  --secondary: oklch(0.95 0.02 290);
+  --secondary-foreground: oklch(0.35 0.15 290);
+  
+  /* Muted */
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.50 0.02 290);
+  
+  /* Accent - Light purple */
+  --accent: oklch(0.92 0.04 290);
+  --accent-foreground: oklch(0.35 0.15 290);
+  
+  --destructive: oklch(0.55 0.20 25);
+  --border: oklch(0.90 0 0);
+  --input: oklch(0.92 0 0);
+  --ring: oklch(0.35 0.15 290);
+  
+  /* Chart colors */
+  --chart-1: oklch(0.35 0.15 290);
+  --chart-2: oklch(0.45 0.12 290);
+  --chart-3: oklch(0.55 0.10 290);
+  --chart-4: oklch(0.65 0.08 290);
+  --chart-5: oklch(0.75 0.06 290);
+  
+  /* Sidebar */
+  --sidebar: oklch(0.35 0.15 290);
+  --sidebar-foreground: oklch(0.99 0 0);
+  --sidebar-primary: oklch(0.92 0.04 290);
+  --sidebar-primary-foreground: oklch(0.35 0.15 290);
+  --sidebar-accent: oklch(0.25 0.12 290);
+  --sidebar-accent-foreground: oklch(0.95 0.02 290);
+  --sidebar-border: oklch(0.30 0.12 290);
+  --sidebar-ring: oklch(0.92 0.04 290);
+}
+
+/* SIBUR-style Teal color scheme for main page */
+.page-sibur {
+  /* Primary - Teal/Cyan (Sibur style) */
+  --primary: oklch(0.50 0.14 192);
+  --primary-foreground: oklch(0.99 0 0);
+  
+  /* Secondary - Light teal */
+  --secondary: oklch(0.92 0.03 192);
+  --secondary-foreground: oklch(0.50 0.14 192);
+  
+  /* Accent - Lighter teal */
+  --accent: oklch(0.88 0.05 192);
+  --accent-foreground: oklch(0.40 0.14 192);
+  
+  /* Ring */
+  --ring: oklch(0.50 0.14 192);
+  
+  /* Chart colors - Teal variations */
+  --chart-1: oklch(0.50 0.14 192);
+  --chart-2: oklch(0.55 0.12 192);
+  --chart-3: oklch(0.60 0.10 192);
+  --chart-4: oklch(0.65 0.08 192);
+  --chart-5: oklch(0.70 0.06 192);
+}
+
+/* Teal color utility classes for Sibur style */
+.bg-teal-primary {
+  background: oklch(0.50 0.14 192);
+}
+
+.bg-teal-dark {
+  background: oklch(0.35 0.14 192);
+}
+
+.bg-teal-light {
+  background: oklch(0.70 0.10 192);
+}
+
+.bg-teal-lighter {
+  background: oklch(0.90 0.05 192);
+}
+
+.bg-teal-lightest {
+  background: oklch(0.96 0.03 192);
+}
+
+.text-teal-primary {
+  color: oklch(0.50 0.14 192);
+}
+
+.text-teal-dark {
+  color: oklch(0.35 0.14 192);
+}
+
+.border-teal-primary {
+  border-color: oklch(0.50 0.14 192);
+}
+
+.hover\:bg-teal-dark:hover {
+  background: oklch(0.40 0.14 192);
+}
+
+.hover\:bg-teal-light:hover {
+  background: oklch(0.96 0.03 192);
+}
+
+.hover\:text-teal-primary:hover {
+  color: oklch(0.50 0.14 192);
+}
+
+.hover\:border-teal-primary:hover {
+  border-color: oklch(0.50 0.14 192);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  ::selection {
+    background: oklch(0.35 0.15 290 / 0.2);
+    color: oklch(0.15 0.02 290);
+  }
+}
+
+/* KEPT-style animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 0.1s; opacity: 0; }
+.stagger-2 { animation-delay: 0.2s; opacity: 0; }
+.stagger-3 { animation-delay: 0.3s; opacity: 0; }
+.stagger-4 { animation-delay: 0.4s; opacity: 0; }
+.stagger-5 { animation-delay: 0.5s; opacity: 0; }
+
+/* KEPT-style accent line */
+.accent-line {
+  height: 3px;
+  background: oklch(0.35 0.15 290);
+}
+
+/* Accent line teal variant */
+.accent-line-teal {
+  height: 3px;
+  background: oklch(0.50 0.14 192);
+}
+
+/* Hover underline effect */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: oklch(0.35 0.15 290);
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.96 0 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.80 0 0);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.35 0.15 290);
+}
+
+/* Section padding */
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* Container */
+.container-kept {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container-kept {
+    padding: 0 16px;
+  }
+}
+
+/* Container for sidebar layouts */
+.container-sidebar {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar-left {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.content-right {
+  flex: 1;
+}
+
+/* KEPT-style category tag */
+.category-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: oklch(0.35 0.15 290);
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Category tag teal variant */
+.category-tag-teal {
+  display: inline-block;
+  padding: 4px 12px;
+  background: oklch(0.50 0.14 192);
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* KEPT-style arrow icon */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: oklch(0.35 0.15 290);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.arrow-link:hover {
+  gap: 12px;
+}
+
+.arrow-link svg {
+  transition: transform 0.3s ease;
+}
+
+.arrow-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Arrow link teal variant */
+.arrow-link-teal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: oklch(0.50 0.14 192);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.arrow-link-teal:hover {
+  gap: 12px;
+}
+
+.arrow-link-teal svg {
+  transition: transform 0.3s ease;
+}
+
+.arrow-link-teal:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Purple sidebar style */
+.sidebar-purple {
+  background: oklch(0.35 0.15 290);
+  color: white;
+}
+
+/* Teal sidebar style */
+.sidebar-teal {
+  background: oklch(0.35 0.14 192);
+  color: white;
+}
+
+/* White content area */
+.content-white {
+  background: white;
+}
+
+/* Card hover effect KEPT style */
+.card-kept {
+  border-bottom: 1px solid oklch(0.90 0 0);
+  transition: all 0.3s ease;
+}
+
+.card-kept:hover {
+  background: oklch(0.98 0 0);
+}
+
+.card-kept:hover .arrow-icon {
+  color: oklch(0.35 0.15 290);
+  transform: translate(2px, -2px);
+}
+
+/* Card hover teal variant */
+.card-teal:hover .arrow-icon {
+  color: oklch(0.50 0.14 192);
+}
+
+.arrow-icon {
+  color: oklch(0.60 0 0);
+  transition: all 0.3s ease;
+}
